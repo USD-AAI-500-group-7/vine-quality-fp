@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 def load_vine_data():
     # File paths
     red_wine_path = "data/winequality-red.csv"
