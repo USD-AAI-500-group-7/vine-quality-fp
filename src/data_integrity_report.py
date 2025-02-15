@@ -1,28 +1,23 @@
-def integrity_report(red_wine, white_wine):
-    # 1- we check for missing values in both datasets
-    missing_values_red = red_wine.isnull().sum()
-    missing_values_white = white_wine.isnull().sum()
+import pprint
 
-    # 2- We check for the duplicate rows
-    duplicate_rows_red = red_wine.duplicated().sum()
-    duplicate_rows_white = white_wine.duplicated().sum()
+def integrity_report(red_wine, white_wine, skip_data_types=False):
+    print("********************************Integrity Report**********************")
+    print("\n**********Red Wine:**********\n")
+    print("Missing Values:")
+    print(red_wine.isnull().sum()) # 1- we check for missing values in both datasets
+    print("\nDuplicate Rows:")
+    print(red_wine.duplicated().sum()) # 2- We check for the duplicate rows
+    if not skip_data_types:
+        print("\nData Types:")
+        print(red_wine.dtypes) # 3- Check for data types
 
-    # 3- Check for data types
-    data_types_red = red_wine.dtypes
-    data_types_white = white_wine.dtypes
+    print("\n**********White Wine:**********\n")
+    print("Missing Values:")
+    print(white_wine.isnull().sum())
+    print("\nDuplicate Rows:")
+    print(white_wine.duplicated().sum())
+    if not skip_data_types:
+        print("\nData Types:")
+        print(white_wine.dtypes)
 
-    # Compile findings
-    data_cleaning_report = {
-        "Red Wine": {
-            "Missing Values": missing_values_red,
-            "Duplicate Rows": duplicate_rows_red,
-            "Data Types": data_types_red
-        },
-        "White Wine": {
-            "Missing Values": missing_values_white,
-            "Duplicate Rows": duplicate_rows_white,
-            "data Types": data_types_white
-        }
-    }
-
-    print(data_cleaning_report)
+    print("********************************Integrity Report End**********************")
