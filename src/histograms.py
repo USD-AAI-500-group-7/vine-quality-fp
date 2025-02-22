@@ -6,15 +6,11 @@ def plot_feature_distributions(data, title):
     fig, axes = plt.subplots(nrows = 4, ncols = 3, figsize = (15, 12)) # Creating 4x3 grid
     fig.subplots_adjust(hspace = 0.5, wspace = 0.3) # adjusting the spacing
 
-    axes = axes.flatten() # flatten axes array for easy loopoing
+    axes = axes.flatten() # flatten axes array for easy looping
 
     for i, column in enumerate(data.columns):
-        data[column].hist(ax = axes[i], bins = 20, alpha = 0.7, color = "purple")
+        data[column].hist(ax = axes[i], bins = 20, alpha = 0.7, color = "purple", edgecolor='black')
         axes[i].set_title(column)
-
-    # Removing empty subplots
-    for j in range(i + 1, len(axes)):
-        fig.delaxes(axes[j])
 
     plt.suptitle(title, fontsize = 17)
     plt.show()

@@ -1,6 +1,3 @@
-import numpy as np
-
-
 # Creating a function to remove outliers using IQR (without over removal)
 def remove_outliers_iqr(data, columns):
     # Calculate Q1, Q3, and IQR for each column
