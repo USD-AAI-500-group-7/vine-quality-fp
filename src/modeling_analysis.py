@@ -104,54 +104,54 @@ def modeling_analysis(red_wine, white_wine):
     """
     ********************************************   Interpretation of the Model Performance   ********************************************
     Red Wine Performance:
-        R-Squared Score:  0.40
-        RMSE:  0.64
+        R-Squared Score:  0.38
+        RMSE:  0.61
 
     White Wine Performance: 
-        R-squared Score: 0.25
-        RMSE: 0.64
+        R-squared Score: 0.32
+        RMSE: 0.61
 
                                                                 R-Squared:                                                         
-        R-squared measures how well the model explains the variability in wine quality. 
-        Therefore, R-squared 0.40 for red wine explains that 40% of the variation in red wine quality is explained by the model. We can 
-        say that this is a moderate performance, and it almost shows that the other factors that affect the wine quality are missing from 
-        our model.
-        For Withe wine, our R-squared score is 0.25 which means 25% of the variation in white wine quality is explained by the model. and it 
-        shows that the model struggles more with white wine in comparing with red wine. 
-        Higher R-squared (closer to 1.0) tells us that we have a better model, but as it decreases from 1.0 and became lower, we say the model 
-        doesn't capturing enough of the variation.
+        R-squared indicates the degree to which the model accounts for the variability in wine quality.
+        Therefore, an R-squared value of 0.38 for red wine indicates that 38% of the variation in red wine quality can be explained by the model. 
+        We can say that this is a moderate performance, and it nearly indicates that other factors affecting wine quality are absent from our model.
+
+        For white wine, our R-squared score is 0.32, indicating that 32% of the variation in white wine quality is explained by the model. 
+        This suggests that the model has more difficulty with white wine compared to red wine.
+
+
+        A higher R-squared (closer to 1.0) indicates a better model, but as it decreases from 1.0 and becomes lower, we say the model isn’t capturing enough of the variation.
+
 
 
 
                                                                 RMSE:                                         
-        RMSE tell us the average difference between actual and predicted wine quality scores. 
-        As we see in the results, both model have an RMSE of 0.64, and it means on average, our predicted wine quality score is off by 0.64 units.
-        Lower RMSE is better since it shows the model's predictions are closet to the actual values. 
+        RMSE shows the average difference between actual and predicted wine quality scores.
+        The results show that both models have an RMSE of 0.61, indicating that on average, our predicted wine quality score deviates by 0.61 units.
+        A lower RMSE indicates better performance, as it reflects that the model's predictions are closer to the actual values.
+
 
 
 
                                                          Analysis of performance:
-        We have moderate performance for Red Wine, but we have lower performance for White Wine
+        We have moderate performance with Red Wine, but lower performance with White Wine.
+
 
     Red Wine:
-        The model almost has done a good job in predicting red wine quality. It explains 40% of variation in quality score. but the RMSE shows
-        almost moderate errors in predictions but we can say it is reasonable for a dataset like th is. 
+        The model has nearly done a good job predicting red wine quality, explaining 38% of the variation in quality scores. However, the RMSE indicates moderate errors in predictions, yet we can consider it reasonable for a dataset like this. 
 
     White Wine:
-        The model here struggles since it only explains 25% of the variation. Because of that, we can say that we don't have some of the important
-        variables that affect the white wine quality more, and we don't have them in the dataset. The result for RMSE is the same with red wine. 
+        The model here struggles because it only explains 32% of the variation. As a result, we can conclude that we are missing some important variables that more significantly affect the quality of white wine, and these variables are not included in the dataset. The RMSE result with red wine is the same. 
 
     Scatter plots:
-        The scatter plot of actual vs predicted quality shows the predictions are spread out, and it tells us that the model doesn't perfectly align 
-        with actual values. In a perfect model, all points will be on the diagonal black line (y = x), while in our model is not like that and many points 
-        deviate from this line and it means the model is not perfect at predicting quality.
+        The scatter plot comparing actual and predicted quality indicates that the predictions are widely dispersed, suggesting that the model does not perfectly match the actual values. 
+        In an ideal model, all points would lie on the diagonal black line (y = x). However, in our model, this is not the case, as many points deviate from the line, indicating that the model is imperfect in predicting quality.
+
 
     Refining the model:
-        if we want to improve the model, we can apply data scaling and transformation. We can normalize or standardize the features to improve the model's
-        performance, or we can use generalized linear model (GLM).
+        To improve the model, we can apply data scaling and transformation. We can normalize or standardize the features to enhance the model's performance, or we can utilize a generalized linear model(GLM).
 
     Conclusion:
-        We can say the model is almost useful for predicting the wine quality, especially for red wine, even though it doesn't explain the wine quality
-        since we don't have other factors that can affect the quality. They are not in the dataset.  
+        We can say the model is somewhat useful for predicting the quality of wine, particularly for red wine, although it doesn't account for wine quality since we lack other factors that may influence it. Those factors are not included in the dataset.  
     """
     )
